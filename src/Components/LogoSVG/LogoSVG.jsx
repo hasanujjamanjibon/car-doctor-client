@@ -1,12 +1,12 @@
-const LogoSVG = () => {
+const LogoSVG = ({ height, width }) => {
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:v="https://svgstorm.com"
         viewBox="0 0 256 256"
-        width="64"
-        height="64"
+        width={`${height || 64}`}
+        height={`${width || 64}`}
       >
         <g
           fill="None"
