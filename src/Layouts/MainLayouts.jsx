@@ -1,15 +1,21 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Shared/Header/Navbar";
 import Footer from "../Shared/Footer/Footer";
 
 const MainLayouts = () => {
+  const location = useLocation();
+  const isShown =
+    location.pathname.includes("/login") ||
+    location.pathname.includes("/register");
+  console.log(isShown);
   return (
-    <div className="bg-gray-50">
-      <Navbar />
-      <div className="min-h-[calc(100vh-300px)] max-w-[1290px] mx-auto ">
+    <div className="">
+      {!isShown && <Navbar />}
+
+      <div className="min-h-[calc(100vh-300px)] ">
         <Outlet />
       </div>
-      <Footer />
+      {!isShown && <Footer />}
     </div>
   );
 };

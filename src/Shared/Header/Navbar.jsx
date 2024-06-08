@@ -56,8 +56,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end flex flex-col items-end text-sm">
-            <span className="text-primary">Already have an account? </span>
-            <Link to="/login" className="underline text-warning">
+            <span className="text-green-500">Already have an account? </span>
+            <Link to="/login" className="underline text-error">
               Click Here
             </Link>
           </div>
