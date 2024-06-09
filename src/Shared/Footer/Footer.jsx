@@ -7,7 +7,7 @@ const Footer = () => {
         <aside>
           <LogoSVG />
           <p>
-            Car Doctor
+            <span className="text-xl font-bold">Car Doctor</span>
             <br />- Buy Parts & Repair Your Car.
           </p>
         </aside>
