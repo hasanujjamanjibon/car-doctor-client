@@ -12,7 +12,7 @@ const MainLayouts = () => {
     <div className="">
       {!isShown && <Navbar />}
 
-      <div className="min-h-[calc(100vh-300px)] ">
+      <div className="min-h-[calc(100vh-300px)] bg-gray-50">
         <Outlet />
       </div>
       {!isShown && <Footer />}

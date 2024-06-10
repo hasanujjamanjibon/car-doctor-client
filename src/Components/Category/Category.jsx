@@ -1,17 +1,32 @@
 import { useEffect, useState } from "react";
+import Loader from "../Loader/Loader";
 
 const Category = () => {
   const [category, setCategory] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const loadCategory = async () => {
-      const response = await fetch("/category.json");
-      const data = await response.json();
-      setCategory(data);
+      try {
+        setLoading(true);
+        const response = await fetch("/category.json");
+        const data = await response.json();
+        setCategory(data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
     };
     loadCategory();
   }, []);
+
+  if (loading) {
+    return Loader;
+  }
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col items-center gap-6 ">
       <span className="inline-block  text-3xl font-bold border-b-rose-600 border-b-4 pb-2">
         Category
       </span>
@@ -19,7 +34,7 @@ const Category = () => {
         {category?.map(({ title, img }, i) => (
           <div
             key={i}
-            className="space-y-2 text-center border-2 p-4 rounded-sm"
+            className="space-y-2 bg-white text-center border-2 p-4 rounded-sm"
           >
             <img className="h-20 w-24 " src={img} alt="" />
             <p className="capitalize font-semibold min-w-max text-sm">
