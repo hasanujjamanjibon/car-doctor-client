@@ -1,0 +1,90 @@
+[
+  {
+    "title": "battery",
+    "img": "https://i.postimg.cc/HLGCGNZf/battery.png"
+  },
+  {
+    "title": "brakes",
+    "img": "https://i.postimg.cc/KYnhm5C4/brakes.png"
+  },
+  {
+    "title": "bumper",
+    "img": "https://i.postimg.cc/26GpZSkD/bumper.png"
+  },
+  {
+    "title": "clutch disc",
+    "img": "https://i.postimg.cc/wvg8Mmd2/clutchdisc.png"
+  },
+  {
+    "title": "engine",
+    "img": "https://i.postimg.cc/kGg0FPGt/engine.png"
+  },
+  {
+    "title": "exhaust pipe",
+    "img": "https://i.postimg.cc/Bb7dm7P7/exhaustpipe.png"
+  },
+  {
+    "title": "gas pedal",
+    "img": "https://i.postimg.cc/HWSDWnv0/gaspedal.png"
+  },
+  {
+    "title": "gear lever",
+    "img": "https://i.postimg.cc/KvRX1bC6/gearlever.png"
+  },
+  {
+    "title": "gear shift",
+    "img": "https://i.postimg.cc/dtXbdXYL/gearshift.png"
+  },
+  {
+    "title": "car grill",
+    "img": "https://i.postimg.cc/bwtKRTyL/grill.png"
+  },
+  {
+    "title": "car hood",
+    "img": "https://i.postimg.cc/Xv6t1CXW/hood.png"
+  },
+  {
+    "title": "horn",
+    "img": "https://i.postimg.cc/rpG3Bwtr/horn.png"
+  },
+  {
+    "title": "oil filter",
+    "img": "https://i.postimg.cc/Pxt9TnmF/oilfilter.png"
+  },
+  {
+    "title": "rear mirror",
+    "img": "https://i.postimg.cc/C1mtKr7M/rearmirror.png"
+  },
+  {
+    "title": "side mirror",
+    "img": "https://i.postimg.cc/MHHLf037/sidemirror.png"
+  },
+  {
+    "title": "spark plug",
+    "img": "https://i.postimg.cc/HnNhwJFf/sparkplug.png"
+  },
+  {
+    "title": "steering",
+    "img": "https://i.postimg.cc/y6pt45Wv/steering.png"
+  },
+  {
+    "title": "suspension",
+    "img": "https://i.postimg.cc/PrLct4wh/suspension.png"
+  },
+  {
+    "title": "tire",
+    "img": "https://i.postimg.cc/9Fvkz7d9/tire.png"
+  },
+  {
+    "title": "visor",
+    "img": "https://i.postimg.cc/htT5mts5/visor.png"
+  },
+  {
+    "title": "windshield",
+    "img": "https://i.postimg.cc/cJW5BG54/windshield.png"
+  },
+  {
+    "title": "wiper",
+    "img": "https://i.postimg.cc/s2JHnHtP/wiper.png"
+  }
+]

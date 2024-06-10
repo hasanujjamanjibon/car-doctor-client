@@ -14,7 +14,7 @@ const SignIn = () => {
   };
   console.log(errors);
   return (
-    <div className="bg-gray-50 p-6 flex justify-center items-center h-screen w-full bg-[url('https://i.postimg.cc/mDDq0t5D/psychedelic-paper-shapes-with-copy-space.jpg')] bg-cover bg-center bg-no-repeat">
+    <div className="bg-gray-50 p-6 flex justify-center items-center h-screen w-full bg-[url('https://i.postimg.cc/xjwdzZp8/psychedelic-paper-shapes-with-copy-space-1.jpg')] bg-cover bg-center bg-no-repeat">
       <div className=" w-full lg:w-fit bg-white shadow-lg overflow-hidden rounded-md lg:grid grid-cols-2 gap-4 flex flex-col justify-center ">
         <img
           src="https://i.postimg.cc/KvyfT1DM/my-password-concept-illustration.png"

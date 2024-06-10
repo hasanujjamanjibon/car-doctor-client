@@ -4,11 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
-import "swiper/css/navigation";
 
 import "./banner.css";
 // import required modules
-import { Navigation, EffectFade, Autoplay } from "swiper/modules";
+import { EffectFade, Autoplay } from "swiper/modules";
 
 const Banner = () => {
   const arry = [
@@ -45,12 +44,11 @@ const Banner = () => {
           type: "progressbar",
         }}
         autoplay={{
-          delay: 2500,
+          delay: 8000,
           disableOnInteraction: false,
         }}
         effect={"fade"}
-        navigation={true}
-        modules={[Navigation, EffectFade, Autoplay]}
+        modules={[EffectFade, Autoplay]}
         className="mySwiper"
       >
         {arry.map(({ title, images, id, description, banner }) => (
@@ -66,10 +64,10 @@ const Banner = () => {
                   <h1 className="text-4xl lg:text-5xl   font-semibold capitalize ">
                     {title}
                   </h1>
-                  <p className=" leading-5 text-justify max-w-[700px]">
+                  <p className=" leading-5 text-md text-justify max-w-[700px]">
                     {description}
                   </p>
-                  <button className=" capitalize  bg-rose-400 border-0 text-lg py-2 px-4 hover:bg-rose-500 transition-colors duration-500 rounded-md">
+                  <button className=" capitalize  bg-rose-400 border-0 text-md py-2 px-4 hover:bg-rose-500 transition-colors duration-500 rounded-md">
                     visit Details &rarr;
                   </button>
                 </div>
