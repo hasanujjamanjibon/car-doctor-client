@@ -18,7 +18,16 @@ const SignUp = () => {
   return (
     <>
       <div className="bg-gray-50 p-6 flex justify-center items-center h-screen w-full bg-[url('https://i.postimg.cc/xjwdzZp8/psychedelic-paper-shapes-with-copy-space-1.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className=" w-full lg:w-fit bg-white shadow-lg overflow-hidden rounded-md lg:grid grid-cols-2 gap-4">
+        <div className=" w-full lg:w-fit relative bg-white shadow-lg overflow-hidden rounded-md lg:grid grid-cols-2 gap-4">
+          <div className="absolute left-0 top-0">
+            <Link to="/">
+              <img
+                className="h-8 bg-sky-300 p-2"
+                src="https://i.postimg.cc/KY3bWMPv/close.png"
+                alt="close"
+              />
+            </Link>
+          </div>
           <div className="bg-white shadow rounded w-full p-10 flex flex-col justify-center ">
             <div className="flex justify-center items-center">
               <LogoSVG height={"100"} width={"100"} />
@@ -156,11 +165,13 @@ const SignUp = () => {
               </div>
             </form>
           </div>
-          <img
-            src="https://i.postimg.cc/Hnpbnyb0/sign-concept-illustration.png"
-            alt="signup-thumbnail"
-            className="max-h-[650px] lg:block hidden"
-          />
+          <div className="lg:flex justify-center items-center   hidden">
+            <img
+              src="https://i.postimg.cc/Hnpbnyb0/sign-concept-illustration.png"
+              alt="signin-thumbnail"
+              className="max-h-[650px]"
+            />
+          </div>
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Loader from "../Loader/Loader";
+import Loader from "../../../Components/Loader/Loader";
 
 const Category = () => {
   const [category, setCategory] = useState([]);

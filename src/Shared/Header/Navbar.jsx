@@ -63,7 +63,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div className="absolute -bottom-0 h-[5px] background-animate bg-gradient-to-r  from-green-700 via-blue-700 to-red-700 z-10 left-0 right-0"></div>
+      <div className="absolute -bottom-0 h-[5px] background-animate bg-gradient-to-r  from-teal-700 via-red-700 to-green-700 z-10 left-0 right-0"></div>
     </div>
   );
 };

@@ -1,12 +1,14 @@
-import Banner from "../../Components/Banner/Banner";
-import Category from "../../Components/Category/Category";
+import Category from "./Category/Category";
+import Banner from "./Banner/Banner";
+import Products from "./Products/Products";
 
 const Home = () => {
   return (
     <div className="space-y-16">
       <Banner />
-      <div className="max-w-[1290px] mx-auto">
+      <div className="max-w-[1290px] mx-auto space-y-10">
         <Category />
+        <Products />
       </div>
     </div>
   );

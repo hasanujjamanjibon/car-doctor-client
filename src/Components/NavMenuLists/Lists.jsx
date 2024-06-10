@@ -5,7 +5,7 @@ const Lists = () => {
         <a>Home</a>
       </li>
       <li>
-        <a>All Enginees</a>
+        <a>All Parts</a>
       </li>
       <li>
         <a>About</a>
