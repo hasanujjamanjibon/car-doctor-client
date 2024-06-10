@@ -19,10 +19,7 @@
     "title": "engine",
     "img": "https://i.postimg.cc/kGg0FPGt/engine.png"
   },
-  {
-    "title": "exhaust pipe",
-    "img": "https://i.postimg.cc/Bb7dm7P7/exhaustpipe.png"
-  },
+
   {
     "title": "gas pedal",
     "img": "https://i.postimg.cc/HWSDWnv0/gaspedal.png"
@@ -86,5 +83,9 @@
   {
     "title": "wiper",
     "img": "https://i.postimg.cc/s2JHnHtP/wiper.png"
+  },
+  {
+    "title": "exhaust pipe",
+    "img": "https://i.postimg.cc/Bb7dm7P7/exhaustpipe.png"
   }
 ]

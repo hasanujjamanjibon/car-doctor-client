@@ -4,7 +4,7 @@ import Lists from "../../Components/NavMenuLists/Lists";
 
 const Navbar = () => {
   return (
-    <div className="sticky top-0 min-h-16 bg-white shadow-md z-50 relative">
+    <div className="sticky top-0 min-h-16 bg-gradient-to-tr from-white to-gray-50 background-animate shadow-md z-50 relative">
       <nav className="max-w-[1290px] mx-auto">
         <div className="navbar  ">
           <div className="navbar-start">
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <LogoSVG />
               </div>
               <div>
-                <span className="bg-clip-text  font-bold text-2xl lg:text-3xl text-transparent bg-gradient-to-tl from-orange-500 to-blue-500">
+                <span className="bg-clip-text  font-bold text-2xl lg:text-3xl text-transparent bg-gradient-to-tl from-orange-500 to-blue-500 background-animate">
                   Car Doctor
                 </span>
                 <p className="text-sm text-muted hidden md:block">
@@ -63,7 +63,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div className="absolute bottom-0 h-1 bg-gradient-to-r from-green-500 via-teal-500 to-blue-700 z-10 left-0 right-0"></div>
+      <div className="absolute -bottom-0 h-[5px] background-animate bg-gradient-to-r  from-green-700 via-blue-700 to-red-700 z-10 left-0 right-0"></div>
     </div>
   );
 };
