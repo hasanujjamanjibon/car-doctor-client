@@ -2,7 +2,7 @@ import LogoSVG from "../../Components/LogoSVG/LogoSVG";
 
 const Footer = () => {
   return (
-    <div className="w-full h-fit bg-gray-950">
+    <div className="w-full h-fit bg-gray-950 mt-10">
       <footer className="footer p-10 !text-gray-100  max-w-[1290px] mx-auto">
         <aside>
           <LogoSVG />

@@ -10,11 +10,13 @@ import About from "../Pages/About/About";
 import Blogs from "../Pages/Blogs/Blogs";
 import Parts from "../Pages/Allparts/Parts";
 import Services from "../Pages/Services/Services";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
