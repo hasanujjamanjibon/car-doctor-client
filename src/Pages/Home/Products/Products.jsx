@@ -5,7 +5,7 @@ const Products = () => {
   const tabs = ["Top Review", "Best Selling", "all"];
   const subTabs = ["top ", "Selling"];
   const [show, setShow] = useState(false);
-  const [active, isActive] = useState(false);
+
 
   const handleShowSubTabs = (tab) => {
     if (tab == "all") {
@@ -45,7 +45,7 @@ const Products = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 place-items-center my-10 px-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 place-items-center my-10 px-4">
         <ProductCard />
         <ProductCard />
         <ProductCard />

@@ -55,7 +55,7 @@ const Navbar = () => {
               <Lists />
             </ul>
           </div>
-          <div className="navbar-end flex flex-col items-end text-sm">
+          <div className="navbar-end flex gap-1 flex-wrap items-end text-sm">
             <span className="text-black">Already have an account? </span>
             <Link to="/login" className="hover:underline text-error">
               login now
