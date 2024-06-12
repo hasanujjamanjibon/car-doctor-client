@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="space-y-16">
       <Banner />
-      <div className="max-w-[1290px] mx-auto space-y-10">
+      <div className="max-w-[1290px] mx-auto space-y-10 px-4">
         <Category />
         <Products />
         <Accordion />
