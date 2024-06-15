@@ -1,23 +1,7 @@
-const Sidebar = ({ shown, isShown }) => {
+const Sidebar = () => {
   return (
     <>
-      <div
-        className={`transition-transform duration-1000    space-y-8 z-40  lg:max-h-full mx-4 p-4 bg-white overflow-y-auto   left-0 top-0 bottom-0 fixed  relative   lg:w-1/5 ${
-          shown ? "translate-x-0 " : "-translate-x-96 "
-        }`}
-      >
-        <div
-          onClick={() => isShown(!shown)}
-          className="absolute right-0 top-0 block lg:hidden"
-        >
-          <span>
-            <img
-              className="h-8 bg-yellow-300 w-8 rounded-full p-2"
-              src="https://i.postimg.cc/KY3bWMPv/close.png"
-              alt="close"
-            />
-          </span>
-        </div>
+      <div className="space-y-4">
         {/* --------------
             Price Filter
         ------------------*/}
@@ -86,7 +70,7 @@ const Sidebar = ({ shown, isShown }) => {
               <label htmlFor="Precision">Precision</label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
-              <input id="gas pedal" type="radio" name="brand" value="Gear Up" />
+              <input id="Gear Up" type="radio" name="brand" value="Gear Up" />
               <label htmlFor="GearUp">Gear Up</label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
@@ -241,15 +225,7 @@ const Sidebar = ({ shown, isShown }) => {
               />
               <label htmlFor="suspension">suspension</label>
             </div>
-            <div className="space-x-1 text-[1rem] font-medium">
-              <input
-                id="gear lever"
-                type="radio"
-                name="category"
-                value="gear lever"
-              />
-              <label htmlFor="gear lever">gear lever</label>
-            </div>
+
           </div>
         </div>
       </div>

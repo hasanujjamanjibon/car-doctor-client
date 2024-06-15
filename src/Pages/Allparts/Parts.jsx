@@ -7,74 +7,134 @@ const Parts = () => {
 
   return (
     <>
-      <div className="w-full flex py-4">
-        <Sidebar shown={shown} isShown={isShown} />
-        {/* ! sidebar */}
-        <div className=" px-4 space-y-4 w-full lg:w-4/5">
-          <div className="bg-white py-4 px-2">
-            <span
-              onClick={() => isShown(!shown)}
-              className="text-xl font-semibold"
-            >
-              Car Parts
-            </span>
+      <div className="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col items-center justify-center">
+          <div className="w-full flex py-4">
+            {/* ! sidebar */}
+            <div className=" px-4 space-y-4 w-full ">
+              <div className="bg-white py-4 px-2 flex justify-between items-center flex-wrap">
+                <span
+                  onClick={() => isShown(!shown)}
+                  className="text-xl font-semibold"
+                >
+                  Parts
+                </span>
+                {/* filter */}
+                <div className="space-x-4">
+                  <div className="join border">
+                    <div className="indicator">
+                      <span
+                        disabled
+                        className="btn btn-sm !bg-transparent !text-black capitalize join-item"
+                      >
+                        Sort By :
+                      </span>
+                    </div>
+                    <select className="select select-sm  join-item focus:border-none focus:outline-none">
+                      <option disabled selected>
+                        Filter
+                      </option>
+                      <option>Sci-fi</option>
+                      <option>Drama</option>
+                      <option>Action</option>
+                    </select>
+                  </div>
+                  <div className="join border">
+                    <div className="indicator">
+                      <span
+                        disabled
+                        className="btn btn-sm !bg-transparent !text-black capitalize join-item"
+                      >
+                        Show :
+                      </span>
+                    </div>
+                    <select
+                      defaultValue={20}
+                      className="select select-sm join-item focus:border-none focus:outline-none"
+                    >
+                      <option>20</option>
+                      <option>30</option>
+                      <option>50</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 place-items-center max-h-screen overflow-y-auto">
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 place-items-center max-h-screen overflow-y-auto">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-          </div>
+          <label
+            htmlFor="my-drawer-2"
+            className="btn btn-primary drawer-button lg:hidden"
+          >
+            Filter
+          </label>
+        </div>
+        <div className="drawer-side">
+          <label
+            htmlFor="my-drawer-2"
+            aria-label="close sidebar"
+            className="drawer-overlay"
+          ></label>
+          <ul className="menu p-4 w-80 min-h-full bg-white text-base-content">
+            {/* Sidebar content here */}
+            <Sidebar />
+          </ul>
         </div>
       </div>
     </>
