@@ -99,11 +99,15 @@ const Sidebar = () => {
                 name="category"
                 value="battery"
               />
-              <label htmlFor="battery">battery</label>
+              <label className="capitalize" htmlFor="battery">
+                battery
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input id="brakes" type="radio" name="category" value="brakes" />
-              <label htmlFor="brakes">brakes</label>
+              <label className="capitalize" htmlFor="brakes">
+                brakes
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -112,15 +116,21 @@ const Sidebar = () => {
                 name="category"
                 value="clutch disc"
               />
-              <label htmlFor="clutch disc">clutch disc</label>
+              <label className="capitalize" htmlFor="clutch disc">
+                clutch disc
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input id="bumper" type="radio" name="category" value="bumper" />
-              <label htmlFor="bumper">bumper</label>
+              <label className="capitalize" htmlFor="bumper">
+                bumper
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input id="engine" type="radio" name="category" value="engine" />
-              <label htmlFor="engine">engine</label>
+              <label className="capitalize" htmlFor="engine">
+                engine
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -129,7 +139,9 @@ const Sidebar = () => {
                 name="category"
                 value="gas pedal"
               />
-              <label htmlFor="gas pedal">gas pedal</label>
+              <label className="capitalize" htmlFor="gas pedal">
+                gas pedal
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -138,7 +150,9 @@ const Sidebar = () => {
                 name="category"
                 value="gear lever"
               />
-              <label htmlFor="gear lever">gear lever</label>
+              <label className="capitalize" htmlFor="gear lever">
+                gear lever
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -147,7 +161,9 @@ const Sidebar = () => {
                 name="category"
                 value="gear shift"
               />
-              <label htmlFor="gear shift">gear shift</label>
+              <label className="capitalize" htmlFor="gear shift">
+                gear shift
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -156,7 +172,9 @@ const Sidebar = () => {
                 name="category"
                 value="car grill"
               />
-              <label htmlFor="car grill">car grill</label>
+              <label className="capitalize" htmlFor="car grill">
+                car grill
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -165,11 +183,15 @@ const Sidebar = () => {
                 name="category"
                 value="car hood"
               />
-              <label htmlFor="car hood">car hood</label>
+              <label className="capitalize" htmlFor="car hood">
+                car hood
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input id="horn" type="radio" name="category" value="horn" />
-              <label htmlFor="horn">horn</label>
+              <label className="capitalize" htmlFor="horn">
+                horn
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -178,7 +200,9 @@ const Sidebar = () => {
                 name="category"
                 value="oil filter"
               />
-              <label htmlFor="oil filter">oil filter</label>
+              <label className="capitalize" htmlFor="oil filter">
+                oil filter
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -187,7 +211,9 @@ const Sidebar = () => {
                 name="category"
                 value="rear mirror"
               />
-              <label htmlFor="rear mirror">rear mirror</label>
+              <label className="capitalize" htmlFor="rear mirror">
+                rear mirror
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -196,7 +222,9 @@ const Sidebar = () => {
                 name="category"
                 value="side mirror"
               />
-              <label htmlFor="side mirror">side mirror</label>
+              <label className="capitalize" htmlFor="side mirror">
+                side mirror
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -205,7 +233,9 @@ const Sidebar = () => {
                 name="category"
                 value="spark plug"
               />
-              <label htmlFor="spark plug">spark plug</label>
+              <label className="capitalize" htmlFor="spark plug">
+                spark plug
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -214,7 +244,9 @@ const Sidebar = () => {
                 name="category"
                 value="steering"
               />
-              <label htmlFor="steering">steering</label>
+              <label className="capitalize" htmlFor="steering">
+                steering
+              </label>
             </div>
             <div className="space-x-1 text-[1rem] font-medium">
               <input
@@ -223,10 +255,22 @@ const Sidebar = () => {
                 name="category"
                 value="suspension"
               />
-              <label htmlFor="suspension">suspension</label>
+              <label className="capitalize" htmlFor="suspension">
+                suspension
+              </label>
             </div>
-
           </div>
+        </div>
+
+        {/* --------------
+           Submit & reset button
+        ------------------*/}
+        <div className="space-x-5">
+          <button className="btn btn-info text-white capitalize btn-sm"> submit</button>
+          <button className="btn btn-outline btn-error capitalize btn-sm">
+            {" "}
+            reset
+          </button>
         </div>
       </div>
     </>

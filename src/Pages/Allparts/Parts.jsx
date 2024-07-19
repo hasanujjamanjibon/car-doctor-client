@@ -26,7 +26,7 @@ const Parts = () => {
                     <div className="indicator">
                       <span
                         disabled
-                        className="btn btn-sm !bg-transparent !text-black capitalize join-item"
+                        className="btn btn-sm !bg-transparent !text-black capitalize join-item focus:border-none focus:outline-none"
                       >
                         Sort By :
                       </span>
