@@ -35,27 +35,32 @@ const Accordion = () => {
   ];
   return (
     <div className="text-center space-y-10">
-      <span className="inline-block px-4 text-3xl font-bold border-b-rose-600 border-b-4 pb-2">
-        Faq
-      </span>
-      <div className="grid lg:grid-cols-2 gap-8 place-items-center text-left ">
-        <div className="join join-vertical w-full">
-          {faq.map(({ que, ans }, i) => (
-            <div className="collapse collapse-arrow join-item border bg-white border-base-300">
-              <input type="radio" name="my-accordion-4" />
-              <div className="collapse-title text-xl font-medium ">{que}</div>
-              <div className="collapse-content">
-                <p>{ans}</p>
+      <div className="max-w-[1290px] mx-auto space-y-10 px-4">
+        <span className="inline-block px-4 text-3xl font-bold border-b-rose-600 border-b-4 pb-2">
+          Faq
+        </span>
+        <div className="grid lg:grid-cols-2 gap-8 place-items-center text-left ">
+          <div className="join join-vertical w-full">
+            {faq.map(({ que, ans }, i) => (
+              <div
+                key={i}
+                className="collapse collapse-arrow join-item border bg-white border-base-300"
+              >
+                <input type="radio" name="my-accordion-4" />
+                <div className="collapse-title text-xl font-medium ">{que}</div>
+                <div className="collapse-content">
+                  <p>{ans}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="h-[400px]">
-          <img
-            className="h-full"
-            src="https://i.postimg.cc/J0ctHTMG/faq.png"
-            alt=""
-          />
+            ))}
+          </div>
+          <div className="h-[400px]">
+            <img
+              className="h-full"
+              src="https://i.postimg.cc/J0ctHTMG/faq.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>

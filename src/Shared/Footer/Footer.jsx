@@ -13,25 +13,25 @@ const Footer = () => {
         </aside>
         <nav>
           <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <a className="link link-hover hover:text-red-500">Branding</a>
+          <a className="link link-hover hover:text-red-500">Design</a>
+          <a className="link link-hover hover:text-red-500">Marketing</a>
+          <a className="link link-hover hover:text-red-500">Advertisement</a>
         </nav>
         <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <h6 className="footer-title"> Company</h6>
+          <a className="link link-hover hover:text-red-500">About us</a>
+          <a className="link link-hover hover:text-red-500">Contact</a>
+          <a className="link link-hover hover:text-red-500">Jobs</a>
+          <a className="link link-hover hover:text-red-500">Press kit</a>
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <a className="link link-hover hover:text-red-500">Terms of use</a>
+          <a className="link link-hover hover:text-red-500">Privacy policy</a>
+          <a className="link link-hover hover:text-red-500">Cookie policy</a>
         </nav>
-        <form className="!text-gray-100">
+        <form>
           <h6 className="footer-title">Newsletter</h6>
           <fieldset className="form-control w-80">
             <label className="label">
@@ -40,10 +40,10 @@ const Footer = () => {
             <div className="join">
               <input
                 type="text"
-                placeholder="username@site.com"
-                className="input input-bordered join-item"
+                placeholder="username@gmail.com"
+                className="input input-bordered join-item text-black"
               />
-              <button className="btn btn-primary join-item">Subscribe</button>
+              <button className="btn btn-error btn-outline join-item">Subscribe</button>
             </div>
           </fieldset>
         </form>

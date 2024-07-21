@@ -7,11 +7,10 @@ const Home = () => {
   return (
     <div className="space-y-16">
       <Banner />
-      <div className="max-w-[1290px] mx-auto space-y-10 px-4">
-        <Category />
-        <Products />
-        <Accordion />
-      </div>
+      {/* <div className="max-w-[1290px] mx-auto space-y-10 px-4"></div> */}
+      <Category />
+      <Products />
+      <Accordion />
     </div>
   );
 };

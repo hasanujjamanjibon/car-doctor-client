@@ -45,9 +45,9 @@ const SignUp = () => {
               Already have an account?{" "}
               <Link
                 to="/login"
-                className="hover:text-gray-500 focus:text-gray-500 focus:outline-none underline text-sm font-medium leading-none  text-blue-800 cursor-pointer"
+                className="hover:text-blue-700 transition-all ease-in-out duration-500 focus:text-blue-700 focus:outline-none hover:underline text-sm  leading-none  text-blue-500 cursor-pointer"
               >
-                Log in here
+                click here
               </Link>
             </p>
             <div className="w-full flex items-center justify-between py-5">
@@ -121,6 +121,9 @@ const SignUp = () => {
                   defaultValue="role"
                   className="bg-gray-200 border rounded focus:outline-blue-600  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
                 >
+                  <option disabled value="role">
+                    Role
+                  </option>
                   <option value="Seller">Seller</option>
                   <option value="Customer">Customer</option>
                 </select>
@@ -160,7 +163,7 @@ const SignUp = () => {
                 <input
                   type="submit"
                   value="Create your account"
-                  className="focus:ring-2 bg-error focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none  border rounded hover:bg-rose-600 py-4 w-full transition-colors duration-300  cursor-pointer"
+                  className="focus:scale-[.98]   text-sm font-semibold leading-none text-white focus:outline-none  border rounded hover:bg-blue-700 bg-blue-500 py-4 w-full transition-all duration-300 ease-in-out  cursor-pointer"
                 />
               </div>
             </form>

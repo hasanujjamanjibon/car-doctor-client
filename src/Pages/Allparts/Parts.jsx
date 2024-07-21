@@ -120,7 +120,7 @@ const Parts = () => {
           </div>
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden"
+            className=" bg-gradient-to-b mb-4 text-xl from-red-400 to-red-400 text-black font-semibold px-10 py-1 drawer-button sticky bottom-2 lg:hidden"
           >
             Filter
           </label>

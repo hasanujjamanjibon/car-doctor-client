@@ -26,7 +26,7 @@ const Category = () => {
     return Loader;
   }
   return (
-    <div className="flex flex-col items-center gap-6 ">
+    <div className="flex flex-col items-center gap-6 max-w-[1290px] mx-auto space-y-10 px-4">
       <span className="inline-block  text-3xl font-bold border-b-rose-600 border-b-4 pb-2">
         Category
       </span>
