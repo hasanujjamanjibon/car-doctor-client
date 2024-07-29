@@ -1,91 +1,113 @@
 [
   {
     "title": "battery",
-    "img": "https://i.postimg.cc/HLGCGNZf/battery.png"
+    "img": "https://i.postimg.cc/HLGCGNZf/battery.png",
+    "category": "battery"
   },
   {
     "title": "brakes",
-    "img": "https://i.postimg.cc/KYnhm5C4/brakes.png"
+    "img": "https://i.postimg.cc/KYnhm5C4/brakes.png",
+    "category": "brakes"
   },
   {
     "title": "bumper",
-    "img": "https://i.postimg.cc/26GpZSkD/bumper.png"
+    "img": "https://i.postimg.cc/26GpZSkD/bumper.png",
+    "category": "bumper"
   },
   {
     "title": "clutch disc",
-    "img": "https://i.postimg.cc/wvg8Mmd2/clutchdisc.png"
+    "img": "https://i.postimg.cc/wvg8Mmd2/clutchdisc.png",
+    "category": "clutch-disc"
   },
   {
     "title": "engine",
-    "img": "https://i.postimg.cc/kGg0FPGt/engine.png"
+    "img": "https://i.postimg.cc/kGg0FPGt/engine.png",
+    "category": "engine"
   },
 
   {
     "title": "gas pedal",
-    "img": "https://i.postimg.cc/HWSDWnv0/gaspedal.png"
+    "img": "https://i.postimg.cc/HWSDWnv0/gaspedal.png",
+    "category": "gas-pedal"
   },
   {
     "title": "gear lever",
-    "img": "https://i.postimg.cc/KvRX1bC6/gearlever.png"
+    "img": "https://i.postimg.cc/KvRX1bC6/gearlever.png",
+    "category": "gear-lever"
   },
   {
     "title": "gear shift",
-    "img": "https://i.postimg.cc/dtXbdXYL/gearshift.png"
+    "img": "https://i.postimg.cc/dtXbdXYL/gearshift.png",
+    "category": "gear-shift"
   },
   {
     "title": "car grill",
-    "img": "https://i.postimg.cc/bwtKRTyL/grill.png"
+    "img": "https://i.postimg.cc/bwtKRTyL/grill.png",
+    "category": "car-grill"
   },
   {
     "title": "car hood",
-    "img": "https://i.postimg.cc/Xv6t1CXW/hood.png"
+    "img": "https://i.postimg.cc/Xv6t1CXW/hood.png",
+    "category": "car-hood"
   },
   {
     "title": "horn",
-    "img": "https://i.postimg.cc/rpG3Bwtr/horn.png"
+    "img": "https://i.postimg.cc/rpG3Bwtr/horn.png",
+    "category": "horn"
   },
   {
     "title": "oil filter",
-    "img": "https://i.postimg.cc/Pxt9TnmF/oilfilter.png"
+    "img": "https://i.postimg.cc/Pxt9TnmF/oilfilter.png",
+    "category": "oil-filter"
   },
   {
     "title": "rear mirror",
-    "img": "https://i.postimg.cc/C1mtKr7M/rearmirror.png"
+    "img": "https://i.postimg.cc/C1mtKr7M/rearmirror.png",
+    "category": "rear-mirror"
   },
   {
     "title": "side mirror",
-    "img": "https://i.postimg.cc/MHHLf037/sidemirror.png"
+    "img": "https://i.postimg.cc/MHHLf037/sidemirror.png",
+    "category": "side-mirror"
   },
   {
     "title": "spark plug",
-    "img": "https://i.postimg.cc/HnNhwJFf/sparkplug.png"
+    "img": "https://i.postimg.cc/HnNhwJFf/sparkplug.png",
+    "category": "spark-plug"
   },
   {
     "title": "steering",
-    "img": "https://i.postimg.cc/y6pt45Wv/steering.png"
+    "img": "https://i.postimg.cc/y6pt45Wv/steering.png",
+    "category": "steering"
   },
   {
     "title": "suspension",
-    "img": "https://i.postimg.cc/PrLct4wh/suspension.png"
+    "img": "https://i.postimg.cc/PrLct4wh/suspension.png",
+    "category": "suspension"
   },
   {
     "title": "tire",
-    "img": "https://i.postimg.cc/9Fvkz7d9/tire.png"
+    "img": "https://i.postimg.cc/9Fvkz7d9/tire.png",
+    "category": "tire"
   },
   {
     "title": "visor",
-    "img": "https://i.postimg.cc/htT5mts5/visor.png"
+    "img": "https://i.postimg.cc/htT5mts5/visor.png",
+    "category": "visor"
   },
   {
     "title": "windshield",
-    "img": "https://i.postimg.cc/cJW5BG54/windshield.png"
+    "img": "https://i.postimg.cc/cJW5BG54/windshield.png",
+    "category": "windshield"
   },
   {
     "title": "wiper",
-    "img": "https://i.postimg.cc/s2JHnHtP/wiper.png"
+    "img": "https://i.postimg.cc/s2JHnHtP/wiper.png",
+    "category": "wiper"
   },
   {
     "title": "exhaust pipe",
-    "img": "https://i.postimg.cc/Bb7dm7P7/exhaustpipe.png"
+    "img": "https://i.postimg.cc/Bb7dm7P7/exhaustpipe.png",
+    "category": "exhaust-pipe"
   }
 ]

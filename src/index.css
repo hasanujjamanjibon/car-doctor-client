@@ -2,14 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .btn-hover-animation {
-  @apply lg:after:content-[' '] lg:after:h-[2px] lg:after:w-full lg:after:absolute lg:after:bg-white lg:after:-bottom-2 lg:after:left-0 lg:after:pt-1 lg:after:hidden;
-} */
-
-body,
-* {
+body {
   font-family: 'Work Sans', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }

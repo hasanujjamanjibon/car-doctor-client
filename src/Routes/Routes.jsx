@@ -5,8 +5,6 @@ import MainLayouts from '../Layouts/MainLayouts';
 import SignIn from '../Pages/SignIn/SignIn';
 import SignUp from '../Pages/SignUp/SignUp';
 import Home from '../Pages/Home/Home';
-import Contact from '../Pages/Contact/Contact';
-import About from '../Pages/About/About';
 import Blogs from '../Pages/Blogs/Blogs';
 import Parts from '../Pages/Allparts/Parts';
 import Services from '../Pages/Services/Services';
@@ -39,12 +37,12 @@ const router = createBrowserRouter([
         element: <Services />,
       },
       {
-        path: 'contact',
-        element: <Contact />,
+        path: 'top-review',
+        element: <div>Top Review</div>,
       },
       {
-        path: 'about',
-        element: <About />,
+        path: 'best-selling',
+        element: <div>best-selling</div>,
       },
       {
         path: 'blogs',

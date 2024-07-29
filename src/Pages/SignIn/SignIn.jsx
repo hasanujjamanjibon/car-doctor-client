@@ -16,7 +16,7 @@ const SignIn = () => {
   console.log(errors);
   return (
     <div className="bg-gray-50 p-6 flex justify-center items-center h-screen w-full bg-[url('https://i.postimg.cc/xjwdzZp8/psychedelic-paper-shapes-with-copy-space-1.jpg')] bg-cover bg-center bg-no-repeat">
-      <div className='relative w-full lg:w-fit bg-white shadow-lg overflow-hidden rounded-md lg:grid grid-cols-2 gap-4 flex flex-col justify-center '>
+      <div className='relative w-full lg:w-fit bg-white shadow-lg overflow-hidden rounded-md md:grid grid-cols-2 gap-4 flex flex-col justify-center '>
         <div className='absolute right-0 top-0'>
           <Link to='/'>
             <img
@@ -26,7 +26,7 @@ const SignIn = () => {
             />
           </Link>
         </div>
-        <div className='lg:flex justify-center items-center   hidden'>
+        <div className='md:flex justify-center items-center   hidden'>
           <img
             src='https://i.postimg.cc/KvyfT1DM/my-password-concept-illustration.png'
             alt='signin-thumbnail'
@@ -34,26 +34,16 @@ const SignIn = () => {
           />
         </div>
 
-        <div className='bg-white shadow rounded w-full p-10 '>
+        <div className='bg-white shadow rounded w-full p-4 flex flex-col justify-evenly'>
           <p
             tabIndex={0}
-            className='focus:outline-none text-2xl font-extrabold leading-6 text-gray-800'>
+            className='focus:outline-none text-xl sm:text-2xl font-extrabold leading-6 text-gray-800'>
             Login to your account
-          </p>
-          <p
-            tabIndex={0}
-            className='focus:outline-none text-sm mt-4 font-medium leading-none text-gray-500'>
-            Don't have account?{' '}
-            <Link
-              to='/register'
-              className='hover:text-blue-700 transition-all ease-in-out duration-500 focus:text-blue-700 focus:outline-none hover:underline text-sm  leading-none  text-blue-500 cursor-pointer'>
-              click here
-            </Link>
           </p>
           <button
             aria-label='Continue with google'
             role='button'
-            className='focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-10'>
+            className='focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex justify-center items-center w-full mt-10'>
             <svg
               width={19}
               height={20}
@@ -77,11 +67,10 @@ const SignIn = () => {
                 fill='#EB4335'
               />
             </svg>
-            <p className='text-base font-medium ml-4 text-gray-700'>
+            <p className='text-sm sm:text-md font-medium ml-4 text-gray-700'>
               Continue with Google
             </p>
           </button>
-
           <div className='w-full flex items-center justify-between py-5'>
             <hr className='w-full bg-gray-400' />
             <p className='text-base font-medium leading-4 px-2.5 text-gray-400'>
@@ -89,7 +78,6 @@ const SignIn = () => {
             </p>
             <hr className='w-full bg-gray-400  ' />
           </div>
-
           <form onSubmit={handleSubmit(onSubmit)} className='space-y-2'>
             {/* ------------------------
                 email Field
@@ -148,7 +136,17 @@ const SignIn = () => {
                 className='focus:ring-2 bg-error focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none  border rounded hover:bg-rose-600 py-4 w-full transition-colors duration-300  cursor-pointer'
               />
             </div>
-          </form>
+          </form>{' '}
+          <p
+            tabIndex={0}
+            className='focus:outline-none text-xs sm:text-md mt-4 font-medium leading-none text-gray-500'>
+            Don't have account?{' '}
+            <Link
+              to='/register'
+              className='hover:text-blue-700 transition-all ease-in-out duration-500 focus:text-blue-700 focus:outline-none hover:underline text-sm  leading-none  text-blue-500 cursor-pointer'>
+              click here
+            </Link>
+          </p>
         </div>
       </div>
     </div>

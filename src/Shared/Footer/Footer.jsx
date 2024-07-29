@@ -33,21 +33,7 @@ const Footer = () => {
         </nav>
         <form>
           <h6 className='footer-title'>Newsletter</h6>
-          <fieldset className='form-control w-80'>
-            <label className='label'>
-              <span>Enter your email address</span>
-            </label>
-            <div className='join'>
-              <input
-                type='text'
-                placeholder='username@gmail.com'
-                className='input input-bordered join-item text-black'
-              />
-              <button className='btn btn-error btn-outline join-item'>
-                Subscribe
-              </button>
-            </div>
-          </fieldset>
+        
         </form>
       </footer>
     </div>

@@ -1,6 +1,6 @@
 const ProductCard = () => {
   return (
-    <div className='py-4 px-6  cursor-pointer bg-white  border-b-4 border-red-500'>
+    <div className='py-4 px-6 max-w-96  cursor-pointer bg-white  '>
       <img
         className='w-32 h-40 mx-auto'
         src='https://i.postimg.cc/htT5mts5/visor.png'

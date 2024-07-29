@@ -34,7 +34,7 @@ const Category = () => {
         {category?.map(({ title, img }, i) => (
           <div
             key={i}
-            className='space-y-2 border-red-500 bg-white text-center border-b-4  shadow-md  p-4 rounded-sm'>
+            className='space-y-4  bg-white text-center   drop-shadow-md  p-4 rounded-sm'>
             <img className='h-20 w-24 ' src={img} alt='' />
             <p className='capitalize font-semibold min-w-max text-sm'>
               {title}
