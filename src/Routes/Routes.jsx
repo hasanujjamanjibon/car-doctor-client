@@ -1,20 +1,20 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 
-import MainLayouts from "../Layouts/MainLayouts";
+import MainLayouts from '../Layouts/MainLayouts';
 
-import SignIn from "../Pages/SignIn/SignIn";
-import SignUp from "../Pages/SignUp/SignUp";
-import Home from "../Pages/Home/Home";
-import Contact from "../Pages/Contact/Contact";
-import About from "../Pages/About/About";
-import Blogs from "../Pages/Blogs/Blogs";
-import Parts from "../Pages/Allparts/Parts";
-import Services from "../Pages/Services/Services";
-import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import SignIn from '../Pages/SignIn/SignIn';
+import SignUp from '../Pages/SignUp/SignUp';
+import Home from '../Pages/Home/Home';
+import Contact from '../Pages/Contact/Contact';
+import About from '../Pages/About/About';
+import Blogs from '../Pages/Blogs/Blogs';
+import Parts from '../Pages/Allparts/Parts';
+import Services from '../Pages/Services/Services';
+import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <MainLayouts />,
     errorElement: <ErrorPage />,
     children: [
@@ -23,31 +23,31 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "login",
+        path: 'login',
         element: <SignIn />,
       },
       {
-        path: "register",
+        path: 'register',
         element: <SignUp />,
       },
       {
-        path: "parts",
+        path: 'parts',
         element: <Parts />,
       },
       {
-        path: "services",
+        path: 'services',
         element: <Services />,
       },
       {
-        path: "contact",
+        path: 'contact',
         element: <Contact />,
       },
       {
-        path: "about",
+        path: 'about',
         element: <About />,
       },
       {
-        path: "blogs",
+        path: 'blogs',
         element: <Blogs />,
       },
     ],

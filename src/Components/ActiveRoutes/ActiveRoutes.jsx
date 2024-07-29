@@ -1,13 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const ActiveRoutes = ({ children, to }) => {
   return (
     <NavLink
       to={to}
       className={({ isActive }) =>
-        isActive ? "text-white lg:text-violet-700" : ""
-      }
-    >
+        isActive ? 'text-white lg:text-violet-700' : ''
+      }>
       {children}
     </NavLink>
   );
