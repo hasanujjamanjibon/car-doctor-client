@@ -1,25 +1,19 @@
 import { useEffect, useState } from 'react';
 import Loader from '../../../Components/Loader/Loader';
+import axios from 'axios';
 
 const Category = () => {
   const [category, setCategory] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  console.log(import.meta.env.VITE_baseURL);
+
   useEffect(() => {
-    const loadCategory = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch('/category.json');
-        const data = await response.json();
-        setCategory(data);
-        setLoading(false);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadCategory();
+    setLoading(true);
+    axios
+      .get(`${import.meta.env.VITE_baseURL}/categories`)
+      .then((result) => setCategory(result.data));
+    setLoading(false);
   }, []);
 
   if (loading) {
@@ -31,16 +25,17 @@ const Category = () => {
         Category
       </span>
       <div className='flex justify-center items-start gap-2 flex-wrap'>
-        {category?.map(({ title, img }, i) => (
-          <div
-            key={i}
-            className='space-y-4  bg-white text-center   drop-shadow-md  p-4 rounded-sm'>
-            <img className='h-20 w-24 ' src={img} alt='' />
-            <p className='capitalize font-semibold min-w-max text-sm'>
-              {title}
-            </p>
-          </div>
-        ))}
+        {category &&
+          category?.map(({ title, img }, i) => (
+            <div
+              key={i}
+              className='space-y-4  bg-white text-center   drop-shadow-md  p-4 rounded-sm'>
+              <img className='h-20 w-24 ' src={img} alt='' />
+              <p className='capitalize font-semibold min-w-max text-sm'>
+                {title}
+              </p>
+            </div>
+          ))}
       </div>
     </div>
   );
