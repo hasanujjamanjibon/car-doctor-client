@@ -17,8 +17,8 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="bg-gray-50 p-6 flex justify-center items-center h-screen w-full bg-[url('https://i.postimg.cc/xjwdzZp8/psychedelic-paper-shapes-with-copy-space-1.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className=' w-full lg:w-fit relative bg-white shadow-lg overflow-hidden rounded-md lg:grid grid-cols-2 gap-4'>
+      <div className='bg-gray-100 p-6 flex justify-center items-center h-screen w-full '>
+        <div className='  min-w-[450px] bg-gray-50 relative border overflow-hidden rounded-md lg:grid grid-cols-1 gap-4'>
           <div className='absolute left-0 top-0'>
             <Link to='/'>
               <img
@@ -28,7 +28,7 @@ const SignUp = () => {
               />
             </Link>
           </div>
-          <div className='bg-white shadow rounded w-full p-10 flex flex-col justify-center '>
+          <div className=' rounded w-full p-4 flex flex-col justify-center '>
             <div className='flex justify-center items-center'>
               <LogoSVG height={'100'} width={'100'} />
             </div>
@@ -43,7 +43,7 @@ const SignUp = () => {
               Already have an account?{' '}
               <Link
                 to='/login'
-                className='hover:text-blue-700 transition-all ease-in-out duration-500 focus:text-blue-700 focus:outline-none hover:underline text-sm  leading-none  text-blue-500 cursor-pointer'>
+                className=' transition-all ease-in-out duration-500  focus:outline-none hover:underline text-sm  leading-none  text-rose-500 cursor-pointer'>
                 click here
               </Link>
             </p>
@@ -159,13 +159,6 @@ const SignUp = () => {
                 />
               </div>
             </form>
-          </div>
-          <div className='lg:flex justify-center items-center   hidden'>
-            <img
-              src='https://i.postimg.cc/Hnpbnyb0/sign-concept-illustration.png'
-              alt='signin-thumbnail'
-              className='max-h-[650px]'
-            />
           </div>
         </div>
       </div>
