@@ -2,7 +2,7 @@ import { FaRegEye } from 'react-icons/fa6';
 import { FcRating } from 'react-icons/fc';
 import { MdMiscellaneousServices, MdOutlineRateReview } from 'react-icons/md';
 
-const ProductCard = ({ review, selling, data }) => {
+const ProductCard = ({ data }) => {
   const {
     productName,
     thumbnail,
@@ -11,6 +11,7 @@ const ProductCard = ({ review, selling, data }) => {
     availableQuantity,
     rating,
     reviews,
+    category,
   } = data || {};
 
   return (
@@ -41,9 +42,12 @@ const ProductCard = ({ review, selling, data }) => {
             Read more
           </span>
         </p>
-        <p className='mb-3  text-gray-700 dark:text-gray-400  text-xl font-semibold'>
-          ${Math.round(price)}
-        </p>
+        <div className='flex justify-between items-center'>
+          <p className='mb-3  text-gray-700 dark:text-gray-400  text-xl font-semibold'>
+            ${Math.round(price)}
+          </p>
+          <p className='badge badge-md badge-primary'>Brands : {category}</p>
+        </div>
 
         <div className=' flex justify-between items-center gap-2 '>
           {/* available service */}
