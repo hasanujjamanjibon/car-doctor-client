@@ -6,12 +6,10 @@ import Loader from '../../Components/Loader/Loader';
 
 const Parts = () => {
   const [loading, setLoading] = useState(true);
-  const [shown, isShown] = useState(true);
   const [datas] = useFetchbytext(
     `${import.meta.env.VITE_baseURL}/parts`,
     setLoading
   );
-
 
   if (loading) {
     return Loader;
@@ -25,11 +23,7 @@ const Parts = () => {
             {/* ! sidebar */}
             <div className=' px-4 space-y-4 w-full '>
               <div className='bg-white py-4 px-2 flex justify-between items-center flex-wrap'>
-                <span
-                  onClick={() => isShown(!shown)}
-                  className='text-xl font-semibold'>
-                  Parts
-                </span>
+                <span className='text-xl font-semibold'>Parts</span>
                 {/* filter */}
                 <div className='space-x-4'>
                   <div className='join border'>
@@ -85,7 +79,7 @@ const Parts = () => {
             className='drawer-overlay'></label>
           <ul className='menu p-4 w-80 min-h-full bg-white text-base-content overflow-y-auto'>
             {/* Sidebar content here */}
-            <Sidebar />
+            <Sidebar endpoint={'parts'} />
           </ul>
         </div>
       </div>

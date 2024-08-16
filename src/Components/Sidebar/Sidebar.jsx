@@ -2,13 +2,18 @@ import { useState } from 'react';
 import Loader from '../Loader/Loader';
 import useFetchbytext from '../../custom/Hook/useFetchbytext';
 
-const Sidebar = () => {
+const Sidebar = ({ endpoint }) => {
   const [loading, setLoading] = useState(true);
   const [datas] = useFetchbytext(
-    `${import.meta.env.VITE_baseURL}/parts`,
+    `${import.meta.env.VITE_baseURL}/${endpoint}`,
     setLoading
   );
-  const categories = datas.map((data) => data.category);
+  console.log(datas);
+
+  const categories =
+    endpoint === 'parts'
+      ? datas.map((data) => data.category)
+      : datas.map((data) => data.serviceType);
   const price = datas.map((data) => data.price);
   const maxPrice = Math.ceil(Math.max(...price));
   const minPrice = Math.ceil(Math.min(...price));
