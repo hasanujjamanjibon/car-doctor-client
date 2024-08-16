@@ -1,10 +1,22 @@
 import { useState } from 'react';
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import Sidebar from '../../Components/Sidebar/Sidebar';
+import useFetchbytext from '../../custom/Hook/useFetchbytext';
+import Loader from '../../Components/Loader/Loader';
 
 const Parts = () => {
+  const [loading, setLoading] = useState(true);
   const [shown, isShown] = useState(true);
+  const [datas] = useFetchbytext(
+    `${import.meta.env.VITE_baseURL}/parts`,
+    setLoading
+  );
 
+  console.log(datas);
+
+  if (loading) {
+    return Loader;
+  }
   return (
     <>
       <div className='drawer lg:drawer-open'>
@@ -54,61 +66,10 @@ const Parts = () => {
                   </div>
                 </div>
               </div>
-              <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 place-items-center max-h-screen overflow-y-auto'>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+              <div className='grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 2xl:grid-cols-4 gap-2 place-items-center max-h-screen overflow-y-auto overflow-x-hidden'>
+                {datas?.map((data, i) => (
+                  <ProductCard key={i} data={data} />
+                ))}
               </div>
             </div>
           </div>
