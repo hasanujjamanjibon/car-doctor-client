@@ -12,8 +12,6 @@ const ProductCard = ({ review, selling, data }) => {
     rating,
     reviews,
   } = data || {};
-  const para =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis dignissimos natus quaerat optio assumenda id reprehenderit aut recusandae maiores reiciendis consectetur architecto magni aliquam, necessitatibus vero eius obcaecati beatae est! Mollitia repellat ut et vitae consectetur, illum in esse?';
 
   return (
     <div className='max-w-md bg-white border group cursor-pointer  border-gray-200 rounded-lg hover:shadow-xl transition-all duration-300 dark:bg-gray-800 dark:border-gray-700 '>
@@ -44,7 +42,7 @@ const ProductCard = ({ review, selling, data }) => {
           </span>
         </p>
         <p className='mb-3  text-gray-700 dark:text-gray-400  text-xl font-semibold'>
-          ${price}
+          ${Math.round(price)}
         </p>
 
         <div className=' flex justify-between items-center gap-2 '>

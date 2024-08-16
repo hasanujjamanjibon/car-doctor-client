@@ -23,11 +23,10 @@ const ProductSection = ({ title }) => {
         </Link>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 place-items-center'>
-        {datas?.map((data, i) => (
+        {datas?.slice(0,8).map((data, i) => (
           <ProductCard key={i} data={data} />
         ))}
       </div>
-      <div className='text-right'></div>
     </div>
   );
 };

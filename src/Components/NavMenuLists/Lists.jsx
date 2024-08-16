@@ -6,7 +6,7 @@ const Lists = ({ setShowNav }) => {
     { id: 2, label: 'Parts', routes: '/parts' },
     { id: 3, label: 'Services', routes: '/services' },
     { id: 4, label: 'Blogs', routes: '/blogs' },
-    // { id: 5, label: 'top review', routes: '/top-review' },
+    { id: 5, label: 'top rated', routes: '/top-rated' },
     // { id: 6, label: 'best selleing', routes: '/best-selling' },
   ];
   return (

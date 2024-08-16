@@ -9,6 +9,7 @@ import Blogs from '../Pages/Blogs/Blogs';
 import Parts from '../Pages/Allparts/Parts';
 import Services from '../Pages/Services/Services';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
+import TopRated from '../Pages/TopRated/TopRated';
 
 const router = createBrowserRouter([
   {
@@ -37,13 +38,10 @@ const router = createBrowserRouter([
         element: <Services />,
       },
       {
-        path: 'top-review',
-        element: <div>Top Review</div>,
+        path: 'top-rated',
+        element: <TopRated />,
       },
-      {
-        path: 'best-selling',
-        element: <div>best-selling</div>,
-      },
+
       {
         path: 'blogs',
         element: <Blogs />,
