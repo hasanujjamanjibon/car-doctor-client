@@ -1,19 +1,43 @@
 const ProductCard = () => {
   return (
-    <div className='py-4 px-6 max-w-96  cursor-pointer bg-white  '>
-      <img
-        className='w-32 h-40 mx-auto'
-        src='https://i.postimg.cc/htT5mts5/visor.png'
-        alt=''
-      />
-      <div></div>
-      <p className='font-semibold text-2xl'>Rear View</p>
-      <p className='text-left leading-4'>
-        Lorem ipsum dolor sit amet consectetur, natus.
-      </p>
-      <div className='flex items-center  gap-8'>
-        <span>$80</span>
-        <span className='line-through'>$97</span>
+    <div className='max-w-md bg-white border group   border-gray-200 rounded-lg hover:shadow-xl transition-all duration-300 dark:bg-gray-800 dark:border-gray-700 overflow-hidden '>
+      <div className='overflow-hidden'>
+        <img
+          className='rounded-t-lg group-hover:scale-110 transition-all duration-300 ease-in-out'
+          src='https://i.postimg.cc/D0JSvWr6/how-to-recondition-batteries.webp'
+          alt=''
+        />
+      </div>
+
+      <div className='p-5'>
+        <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+          Noteworthy technology acquisitions 2021
+        </h5>
+
+        <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+          delectus, molestiae fugiat modi quas adipisci nam molestias, quod,
+          tempora harum minus!
+        </p>
+        <a
+          href='#'
+          className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
+          Read more
+          <svg
+            className='rtl:rotate-180 w-3.5 h-3.5 ms-2'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 14 10'>
+            <path
+              stroke='currentColor'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              d='M1 5h12m0 0L9 1m4 4L9 9'
+            />
+          </svg>
+        </a>
       </div>
     </div>
   );

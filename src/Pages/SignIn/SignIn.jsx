@@ -10,10 +10,10 @@ const SignIn = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+
     reset();
   };
-  console.log(errors);
+
   return (
     <div className='bg-gray-100  p-4 flex justify-center items-center h-screen w-full'>
       <div className='relative bg-gray-50 min-w-[450px]  overflow-hidden rounded-md md:grid grid-cols-1 gap-4 flex flex-col justify-center '>
