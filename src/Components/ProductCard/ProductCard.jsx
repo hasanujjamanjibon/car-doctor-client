@@ -3,6 +3,7 @@ import { FcRating } from 'react-icons/fc';
 import { MdMiscellaneousServices, MdOutlineRateReview } from 'react-icons/md';
 
 const ProductCard = ({ data }) => {
+  const user = {};
   const {
     productName,
     thumbnail,
@@ -42,12 +43,25 @@ const ProductCard = ({ data }) => {
             Read more
           </span>
         </p>
-        <div className='flex justify-between items-center'>
-          <p className='mb-3  text-gray-700 dark:text-gray-400  text-xl font-semibold'>
+        <div className='flex justify-between items-center mb-3'>
+          <p className='  text-gray-700 dark:text-gray-400  text-xl font-semibold'>
             ${Math.round(price)}
           </p>
-          <p className='badge badge-md badge-primary'>Brands : {category}</p>
+          <p className='text-lg  font-medium'>
+            Brands :{' '}
+            <span className='badge badge-md  badge-secondary'>{category}</span>
+          </p>
         </div>
+
+        {user ? (
+          <button className='text-white bg-gradient-to-r from-[#ab41d8]  to-rose-600 uppercase w-full hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800'>
+            add to cart
+          </button>
+        ) : (
+          <button className='text-white bg-gradient-to-r from-[#be47f1]  to-rose-500 uppercase w-full hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800'>
+            add to Favourite
+          </button>
+        )}
 
         <div className=' flex justify-between items-center gap-2 '>
           {/* available service */}

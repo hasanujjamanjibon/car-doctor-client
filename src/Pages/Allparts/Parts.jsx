@@ -12,7 +12,6 @@ const Parts = () => {
     setLoading
   );
 
-  console.log(datas);
 
   if (loading) {
     return Loader;

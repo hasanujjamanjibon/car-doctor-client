@@ -9,8 +9,12 @@ const Sidebar = () => {
     setLoading
   );
   const categories = datas.map((data) => data.category);
+  const price = datas.map((data) => data.price);
+  const maxPrice = Math.ceil(Math.max(...price));
+  const minPrice = Math.ceil(Math.min(...price));
+  console.log(maxPrice, minPrice);
+
   const uniqueCategories = [...new Set(categories)];
-  console.log(uniqueCategories);
 
   if (loading) {
     return Loader;
@@ -27,18 +31,18 @@ const Sidebar = () => {
         <div className='flex items-center gap-2 justify-start overflow-hidden w-full'>
           <input
             type='text'
-            className='px-2 py-2 border max-w-20 rounded-sm'
-            placeholder='min.'
-            defaultValue={0}
+            className='px-2 py-2 border  rounded-sm w-full text-center'
+            placeholder='min. $'
+            defaultValue={minPrice}
           />{' '}
-          ৳
+          $
           <input
             type='text'
-            className='px-2 py-2 border max-w-20 rounded-sm'
-            placeholder='max.'
-            defaultValue={30000}
+            className='px-2 py-2 border w-full rounded-sm text-center'
+            placeholder='max. $'
+            defaultValue={maxPrice}
           />{' '}
-          ৳
+          $
         </div>
       </div>
 
