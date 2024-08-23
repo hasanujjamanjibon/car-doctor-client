@@ -8,7 +8,6 @@ const Sidebar = ({ endpoint }) => {
     `${import.meta.env.VITE_baseURL}/${endpoint}`,
     setLoading
   );
-  console.log(datas);
 
   const categories =
     endpoint === 'parts'
@@ -17,12 +16,11 @@ const Sidebar = ({ endpoint }) => {
   const price = datas.map((data) => data.price);
   const maxPrice = Math.ceil(Math.max(...price));
   const minPrice = Math.ceil(Math.min(...price));
-  console.log(maxPrice, minPrice);
 
   const uniqueCategories = [...new Set(categories)];
 
   if (loading) {
-    return Loader;
+    return <Loader />;
   }
   return (
     <div className='space-y-4 relative md:static top-20'>

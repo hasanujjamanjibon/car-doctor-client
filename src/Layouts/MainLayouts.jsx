@@ -13,7 +13,7 @@ const MainLayouts = () => {
   return (
     <div className=''>
       {!isShown && <Navbar />}
-      <div className='min-h-[calc(100vh-300px)] bg-gray-50'>
+      <div className='min-h-[calc(100vh-348px)] bg-gray-50'>
         {navigation.state === 'loading' && <Loader />}
         <Outlet />
       </div>

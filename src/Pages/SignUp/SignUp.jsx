@@ -11,18 +11,17 @@ const SignUp = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     reset();
   };
 
   return (
     <>
-      <div className='bg-gray-100 p-6 flex justify-center items-center h-screen w-full '>
+      <div className='bg-teal-100 p-6 flex justify-center items-center h-screen w-full '>
         <div className='  min-w-[450px] bg-gray-50 relative border overflow-hidden rounded-md lg:grid grid-cols-1 gap-4'>
           <div className='absolute left-0 top-0'>
             <Link to='/'>
               <img
-                className='h-8 bg-sky-300 p-2'
+                className='h-8 bg-gray-50 shadow-2xl p-2 '
                 src='https://i.postimg.cc/KY3bWMPv/close.png'
                 alt='close'
               />

@@ -11,7 +11,7 @@ const TopRated = () => {
   );
 
   if (loading) {
-    return Loader;
+    return <Loader />;
   }
   return (
     <div className='max-w-[1290px] mx-auto space-y-2 px-2 py-4'>

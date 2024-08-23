@@ -15,7 +15,7 @@ const ServicesCard = ({ data }) => {
   } = data || {};
 
   return (
-    <div className='max-w-md bg-white border group cursor-pointer  border-gray-200 rounded-lg hover:shadow-xl transition-all duration-300 dark:bg-gray-800 dark:border-gray-700 '>
+    <div className='max-w-md bg-white  group cursor-pointer   rounded-lg hover:drop-shadow-2xl transition-all duration-300 dark:bg-gray-800 '>
       <div className='overflow-hidden rounded-lg'>
         <img
           className='rounded-t-lg group-hover:scale-110 transition-all duration-300 ease-in-out !h-48 w-full object-cover mx-auto'
@@ -49,9 +49,7 @@ const ServicesCard = ({ data }) => {
           </p>
           <p className='text-md  font-medium'>
             serviceType :{' '}
-            <span className='badge badge-md  badge-secondary'>
-              {serviceType}
-            </span>
+            <span className='badge badge-md  badge-accent'>{serviceType}</span>
           </p>
         </div>
 
@@ -86,13 +84,6 @@ const ServicesCard = ({ data }) => {
             </p>
           </div>
           {/* rating */}
-
-          {/* <div title='see details' className='text-2xl'></div> */}
-          <div className='tooltip' data-tip='See Details'>
-            <button className='text-xl'>
-              <FaRegEye />
-            </button>
-          </div>
         </div>
       </div>
     </div>

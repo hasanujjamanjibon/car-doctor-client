@@ -10,17 +10,16 @@ const SignIn = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-
     reset();
   };
 
   return (
-    <div className='bg-gray-100  p-4 flex justify-center items-center h-screen w-full'>
-      <div className='relative bg-gray-50 min-w-[450px]  overflow-hidden rounded-md md:grid grid-cols-1 gap-4 flex flex-col justify-center '>
+    <div className='bg-red-50  p-4 flex justify-center items-center h-screen w-full'>
+      <div className='relative drop-shadow-2xl  bg-gray-100 min-w-[450px]  overflow-hidden rounded-md md:grid grid-cols-1 gap-4 flex flex-col justify-center '>
         <div className='absolute right-0 top-0'>
           <Link to='/'>
             <img
-              className='h-8 bg-yellow-300 p-2'
+              className='h-8 bg-gray-100 shadow-2xl p-2 rounded-full'
               src='https://i.postimg.cc/KY3bWMPv/close.png'
               alt='close'
             />
@@ -125,7 +124,7 @@ const SignIn = () => {
             <div className='!mt-4'>
               <input
                 type='submit'
-                value='Log-in your account'
+                value='Login your account'
                 className='focus:ring-2 bg-error focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none  border rounded hover:bg-rose-600 py-4 w-full transition-colors duration-300  cursor-pointer'
               />
             </div>

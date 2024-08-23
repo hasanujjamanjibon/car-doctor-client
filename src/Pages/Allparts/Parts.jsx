@@ -10,10 +10,13 @@ const Parts = () => {
     `${import.meta.env.VITE_baseURL}/parts`,
     setLoading
   );
-
+  console.log('LOADING => ', loading);
   if (loading) {
-    return Loader;
+    return <Loader />;
   }
+
+  console.log('LOADING => ', loading);
+
   return (
     <>
       <div className='drawer lg:drawer-open'>
