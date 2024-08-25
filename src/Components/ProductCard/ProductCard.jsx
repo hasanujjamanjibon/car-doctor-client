@@ -17,12 +17,15 @@ const ProductCard = ({ data }) => {
 
   return (
     <div className='max-w-md bg-white border group cursor-pointer  border-gray-200 rounded-lg hover:shadow-xl transition-all duration-300 dark:bg-gray-800 dark:border-gray-700 '>
-      <div className='overflow-hidden rounded-lg'>
+      <div className='overflow-hidden rounded-lg relative'>
         <img
           className='rounded-t-lg group-hover:scale-110 transition-all duration-300 ease-in-out h-48 w-full object-contain mx-auto'
           src={thumbnail}
           alt=''
         />
+         <p className='text-lg  font-medium absolute top-2 right-4'>
+            <span className='badge badge-md  badge-secondary'>{category}</span>
+          </p>
       </div>
 
       <div className='p-5'>
@@ -48,7 +51,6 @@ const ProductCard = ({ data }) => {
             ${Math.round(price)}
           </p>
           <p className='text-lg  font-medium'>
-            Brands :{' '}
             <span className='badge badge-md  badge-secondary'>{category}</span>
           </p>
         </div>

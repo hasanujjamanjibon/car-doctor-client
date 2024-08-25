@@ -16,15 +16,23 @@ const ServicesCard = ({ data }) => {
 
   return (
     <div className='max-w-md bg-white  group cursor-pointer   rounded-lg hover:drop-shadow-2xl transition-all duration-300 dark:bg-gray-800 '>
-      <div className='overflow-hidden rounded-lg'>
+      <div className='overflow-hidden rounded-lg p-4 relative'>
         <img
-          className='rounded-t-lg group-hover:scale-110 transition-all duration-300 ease-in-out !h-48 w-full object-cover mx-auto'
+          className='rounded-lg  transition-all duration-300 ease-in-out !h-48 w-full object-cover mx-auto'
           src={thumbnail}
           alt={title}
         />
+        <p className='text-md  font-medium absolute top-2 right-4'>
+          <span className='badge badge-md  badge-secondary'>
+            {availability}
+          </span>
+        </p>
+        <p className='text-md  font-medium absolute top-2 left-4'>
+          <span className='badge badge-md  badge-accent'>{serviceType}</span>
+        </p>
       </div>
 
-      <div className='p-5'>
+      <div className='p-5 pb-2'>
         <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white truncate'>
           {title.length > 20 ? title.slice(0, 20) + '...' : title}
         </h5>
@@ -40,7 +48,7 @@ const ServicesCard = ({ data }) => {
             Read more
           </span>
         </p>
-        <div className='flex justify-between flex-col items-start mb-3 gap-2 capitalize'>
+        {/* <div className='flex justify-between flex-col items-start mb-3 gap-2 capitalize'>
           <p className='text-md  font-medium'>
             availability :{' '}
             <span className='badge badge-md  badge-secondary'>
@@ -51,18 +59,8 @@ const ServicesCard = ({ data }) => {
             serviceType :{' '}
             <span className='badge badge-md  badge-accent'>{serviceType}</span>
           </p>
-        </div>
-
-        <div className='flex items-center gap-4'>
-          <button className='text-white bg-gradient-to-r from-[#ab41d8]  to-rose-600 uppercase w-full hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex-1'>
-            Get Services
-          </button>
-          <p className='  text-gray-700 dark:text-gray-400  text-xl font-semibold'>
-            ${Math.round(price)}
-          </p>
-        </div>
-
-        <div className=' flex justify-between items-center gap-2 '>
+        </div> */}
+        <div className=' flex justify-between items-center gap-2 mb-2'>
           {/* available service */}
           <div
             data-tip='service available'
@@ -78,12 +76,18 @@ const ServicesCard = ({ data }) => {
             title='Review'
             className='text-lg cursor-pointer flex justify-center items-center gap-2  w-fit'>
             <RiTimerFlashLine />
-
             <p className=' font-normal text-gray-700 dark:text-gray-400'>
               {duration}
             </p>
           </div>
-          {/* rating */}
+        </div>
+        <div className='flex items-center gap-4'>
+          <button className='text-white bg-gradient-to-r from-[#ab41d8]  to-rose-600 uppercase w-full hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex-1'>
+            Get Services
+          </button>
+          <p className='  text-gray-700 dark:text-gray-400  text-xl font-semibold'>
+            ${Math.round(price)}
+          </p>
         </div>
       </div>
     </div>
