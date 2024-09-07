@@ -6,19 +6,20 @@ const Blogs = () => {
         <p className=' bg-gradient-to-r from-[#6647f1]   to-[#9122c1] rounded-s-sm  text-white min-w-max px-2 py-1 md:py-2 font-semibold text-lg'>
           Latest Blogs
         </p>
-        <Marquee pauseOnHover='true' gradient='true'>
+        <Marquee pauseOnHover='true'>
           <span className='text-sm font-medium'>
-            I can be a React component, multiple React components, or just some
-            text.
+            Blogs section coming soon.........
           </span>
         </Marquee>
       </div>
       <div className='lg:grid grid-cols-3 gap-4'>
+        {/* recent news */}
         <div className='col-span-2'>
           <div>
-            <img src="" alt="" />
+            <img src='' alt='' />
           </div>
         </div>
+        {/* all news */}
         <div className='col-span-1'></div>
       </div>
     </div>

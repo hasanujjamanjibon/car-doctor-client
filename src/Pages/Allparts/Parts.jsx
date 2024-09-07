@@ -62,7 +62,7 @@ const Parts = () => {
                   </div>
                 </div>
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 2xl:grid-cols-4 gap-2 place-items-center max-h-screen overflow-y-auto overflow-x-hidden'>
+              <div className='grid grid-cols-1 md:grid-cols-2 px-2   xl:grid-cols-3 2xl:grid-cols-4 gap-2 place-items-center max-h-screen overflow-y-auto overflow-x-hidden'>
                 {datas?.map((data, i) => (
                   <ProductCard key={i} data={data} />
                 ))}

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import LogoSVG from '../../Components/LogoSVG/LogoSVG';
+import { FaEyeLowVision } from 'react-icons/fa6';
+import { IoMdArrowBack } from 'react-icons/io';
 
 const SignUp = () => {
   const {
@@ -18,13 +20,9 @@ const SignUp = () => {
     <>
       <div className='bg-teal-100 p-6 flex justify-center items-center h-screen w-full '>
         <div className='  min-w-[450px] bg-gray-50 relative border overflow-hidden rounded-md lg:grid grid-cols-1 gap-4'>
-          <div className='absolute left-0 top-0'>
+          <div className='absolute right-2 top-2'>
             <Link to='/'>
-              <img
-                className='h-8 bg-gray-50 shadow-2xl p-2 '
-                src='https://i.postimg.cc/KY3bWMPv/close.png'
-                alt='close'
-              />
+              <IoMdArrowBack className='text-2xl' />
             </Link>
           </div>
           <div className=' rounded w-full p-4 flex flex-col justify-center '>
@@ -135,6 +133,7 @@ const SignUp = () => {
                   className='text-sm font-medium leading-none text-gray-800'>
                   Password
                 </label>
+
                 <input
                   className=' bg-gray-200 border rounded focus:outline-blue-600  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 '
                   type='password'
@@ -142,7 +141,8 @@ const SignUp = () => {
                     required: true,
                     pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/i,
                   })}
-                />{' '}
+                />
+
                 {errors.password?.type === 'required' && (
                   <p role='alert' className='text-error'>
                     Password is required

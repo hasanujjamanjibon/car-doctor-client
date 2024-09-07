@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { IoMdArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {
@@ -15,14 +16,10 @@ const SignIn = () => {
 
   return (
     <div className='bg-red-50  p-4 flex justify-center items-center h-screen w-full'>
-      <div className='relative drop-shadow-2xl  bg-gray-100 min-w-[450px]  overflow-hidden rounded-md md:grid grid-cols-1 gap-4 flex flex-col justify-center '>
-        <div className='absolute right-0 top-0'>
+      <div className='relative drop-shadow-2xl  bg-gray-50 min-w-[450px]  overflow-hidden rounded-md md:grid grid-cols-1 gap-4 flex flex-col justify-center '>
+        <div className='absolute right-2 top-2'>
           <Link to='/'>
-            <img
-              className='h-8 bg-gray-100 shadow-2xl p-2 rounded-full'
-              src='https://i.postimg.cc/KY3bWMPv/close.png'
-              alt='close'
-            />
+            <IoMdArrowBack className='text-2xl' />
           </Link>
         </div>
 
