@@ -4,8 +4,8 @@ const LogoSVG = ({ height, width }) => {
       xmlns='http://www.w3.org/2000/svg'
       xmlns:v='https://svgstorm.com'
       viewBox='0 0 256 256'
-      width={`${height || 64}`}
-      height={`${width || 64}`}>
+      width={`${height || 40}`}
+      height={`${width || 40}`}>
       <g
         fill='None'
         fillOpacity='0.0'

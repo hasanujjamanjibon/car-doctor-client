@@ -1,22 +1,22 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const useFetchbytext = (url, setLoading) => {
-  const [datas, setData] = useState([]);
+const useFetchAllService = () => {
+  const [ServiceDatas, setData] = useState([]);
 
   useEffect(() => {
     const loadCategory = async () => {
       try {
-        setLoading(true);
-        const result = await axios.get(url);
+        const result = await axios.get(
+          `${import.meta.env.VITE_baseURL}/services`
+        );
         setData(result?.data);
-        setLoading(false);
       } catch (error) {
         console.log(error);
       }
     };
     loadCategory();
-  }, [url, setLoading]);
-  return [datas];
+  }, []);
+  return [ServiceDatas];
 };
-export default useFetchbytext;
+export default useFetchAllService;

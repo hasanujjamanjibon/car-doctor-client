@@ -15,7 +15,7 @@ const Lists = ({ setShowNav }) => {
         <ActiveRoutes id={id} to={routes} key={i}>
           <p
             onClick={() => setShowNav(false)}
-            className='block  py-4 lg:py-0 relative  px-2 font-semibold  transition-colors duration-300 ease-in-out  hover:bg-[#eceaea] hover:text-gray-900  lg:hover:text-black lg:hover:bg-transparent'>
+            className='block  py-4 lg:py-0 relative  px-2 font-semibold  transition-colors duration-300 ease-in-out  hover:bg-[#eceaea] hover:text-gray-900  lg:hover:text-red-950 lg:hover:bg-transparent'>
             {label}
           </p>
         </ActiveRoutes>

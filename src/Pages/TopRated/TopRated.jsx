@@ -1,18 +1,10 @@
 import { useState } from 'react';
 import ProductCard from '../../Components/ProductCard/ProductCard';
-import useFetchbytext from '../../custom/Hook/useFetchbytext';
-import Loader from '../../Components/Loader/Loader';
+import useFetchTopRatedData from '../../custom/Hook/useFetchTopRatedData';
 
 const TopRated = () => {
-  const [loading, setLoading] = useState(true);
-  const [datas] = useFetchbytext(
-    `${import.meta.env.VITE_baseURL}/top-rated`,
-    setLoading
-  );
+  const [datas] = useFetchTopRatedData()
 
-  if (loading) {
-    return <Loader />;
-  }
   return (
     <div className='max-w-[1290px] mx-auto space-y-2 px-2 py-4'>
       <div className=' py-4 px-2 flex justify-center items-center bg-gray-900'>

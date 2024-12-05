@@ -1,29 +1,27 @@
-import { useState } from 'react';
-import Loader from '../Loader/Loader';
-import useFetchbytext from '../../custom/Hook/useFetchbytext';
+import useFetchAllParts from '../../custom/Hook/useFetchAllParts';
+import useFetchAllService from '../../custom/Hook/useFetchAllService';
 
 const Sidebar = ({ endpoint }) => {
-  const [loading, setLoading] = useState(true);
-  const [datas] = useFetchbytext(
-    `${import.meta.env.VITE_baseURL}/${endpoint}`,
-    setLoading
-  );
+  const [PartsDatas] = useFetchAllParts();
+  const [ServiceDatas] = useFetchAllService();
 
   const categories =
     endpoint === 'parts'
-      ? datas.map((data) => data.category)
-      : datas.map((data) => data.serviceType);
-  const price = datas.map((data) => data.price);
-  const maxPrice = Math.ceil(Math.max(...price));
-  const minPrice = Math.ceil(Math.min(...price));
+      ? PartsDatas.map((data) => data?.category)
+      : ServiceDatas.map((data) => data?.serviceType);
 
   const uniqueCategories = [...new Set(categories)];
 
-  if (loading) {
-    return <Loader />;
-  }
+  const price =
+    endpoint === 'parts'
+      ? PartsDatas.map((data) => data?.price)
+      : ServiceDatas.map((data) => data?.price);
+
+  const maxPrice = Math.max(...price);
+  const minPrice = Math.min(...price);
+
   return (
-    <div className='space-y-4 relative md:static top-20'>
+    <div className='space-y-4 relative  md:static top-20'>
       {/* --------------
             Price Filter
         ------------------*/}
@@ -34,16 +32,14 @@ const Sidebar = ({ endpoint }) => {
         <div className='flex items-center gap-2 justify-start overflow-hidden w-full'>
           <input
             type='text'
-            className='px-2 py-2 border  rounded-sm w-full text-center'
-            placeholder='min. $'
-            defaultValue={minPrice}
+            className='px-2 py-2 border  rounded-sm w-full text-center placeholder:text-gray-900'
+            placeholder={minPrice}
           />{' '}
           $
           <input
             type='text'
-            className='px-2 py-2 border w-full rounded-sm text-center'
-            placeholder='max. $'
-            defaultValue={maxPrice}
+            className='px-2 py-2 border w-full rounded-sm text-center placeholder:text-gray-900'
+            placeholder={maxPrice}
           />{' '}
           $
         </div>

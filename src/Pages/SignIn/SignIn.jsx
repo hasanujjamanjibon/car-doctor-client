@@ -15,6 +15,8 @@ const SignIn = () => {
   };
 
   return (
+
+
     <div className='bg-red-50  p-4 flex justify-center items-center h-screen w-full'>
       <div className='relative drop-shadow-2xl  bg-gray-50 min-w-[450px]  overflow-hidden rounded-md md:grid grid-cols-1 gap-4 flex flex-col justify-center '>
         <div className='absolute right-2 top-2'>
@@ -29,6 +31,7 @@ const SignIn = () => {
             className='focus:outline-none text-xl sm:text-2xl font-extrabold leading-6 text-gray-800'>
             Login to your account
           </p>
+          
           <button
             aria-label='Continue with google'
             role='button'

@@ -1,21 +1,10 @@
-import { useState } from 'react';
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import Sidebar from '../../Components/Sidebar/Sidebar';
-import useFetchbytext from '../../custom/Hook/useFetchbytext';
-import Loader from '../../Components/Loader/Loader';
+
+import useFetchAllParts from '../../custom/Hook/useFetchAllParts';
 
 const Parts = () => {
-  const [loading, setLoading] = useState(true);
-  const [datas] = useFetchbytext(
-    `${import.meta.env.VITE_baseURL}/parts`,
-    setLoading
-  );
-  console.log('LOADING => ', loading);
-  if (loading) {
-    return <Loader />;
-  }
-
-  console.log('LOADING => ', loading);
+  const [PartsDatas] = useFetchAllParts();
 
   return (
     <>
@@ -33,28 +22,34 @@ const Parts = () => {
                     <div className='indicator'>
                       <span
                         disabled
-                        className='btn btn-sm !bg-transparent !text-black capitalize join-item focus:border-0 focus:outline-0'>
+                        className='btn btn-sm !bg-transparent !text-black capitalize join-item focus:border-0 focus:outline-0'
+                      >
                         Sort By :
                       </span>
                     </div>
-                    <select className='select select-sm  join-item focus:border-0 focus:outline-0'>
-                      <option selected>All</option>
-                      <option>Sci-fi</option>
-                      <option>Drama</option>
-                      <option>Action</option>
+                    <select
+                      defaultValue={'ALL'}
+                      className='select select-sm  join-item focus:border-0 focus:outline-0'
+                    >
+                      <option value='All'>All</option>
+                      <option value='Sci'>Sci-fi</option>
+                      <option value='Drama'>Drama</option>
+                      <option value='Action'>Action</option>
                     </select>
                   </div>
                   <div className='join border'>
                     <div className='indicator'>
                       <span
                         disabled
-                        className='btn btn-sm !bg-transparent !text-black capitalize join-item'>
+                        className='btn btn-sm !bg-transparent !text-black capitalize join-item'
+                      >
                         Show :
                       </span>
                     </div>
                     <select
                       defaultValue={20}
-                      className='select select-sm join-item focus:border-none focus:outline-none'>
+                      className='select select-sm join-item focus:border-none focus:outline-none'
+                    >
                       <option>20</option>
                       <option>30</option>
                       <option>50</option>
@@ -62,8 +57,8 @@ const Parts = () => {
                   </div>
                 </div>
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-2 px-2   xl:grid-cols-3 2xl:grid-cols-4 gap-2 place-items-center max-h-screen overflow-y-auto overflow-x-hidden'>
-                {datas?.map((data, i) => (
+              <div className='grid grid-cols-1 md:grid-cols-2  px-2  xl:grid-cols-3 gap-3   pb-2 place-items-center max-h-screen overflow-y-auto overflow-x-hidden'>
+                {PartsDatas?.map((data, i) => (
                   <ProductCard key={i} data={data} />
                 ))}
               </div>
@@ -71,7 +66,8 @@ const Parts = () => {
           </div>
           <label
             htmlFor='my-drawer-2'
-            className=' bg-gradient-to-b mb-4 text-xl from-red-400 to-red-400 text-black font-semibold px-10 py-1 drawer-button sticky bottom-2 lg:hidden'>
+            className=' bg-gradient-to-b mb-4 text-xl from-red-400 to-red-400 text-black font-semibold px-10 py-1 drawer-button sticky bottom-2 lg:hidden'
+          >
             Filter
           </label>
         </div>
@@ -79,7 +75,8 @@ const Parts = () => {
           <label
             htmlFor='my-drawer-2'
             aria-label='close sidebar'
-            className='drawer-overlay'></label>
+            className='drawer-overlay'
+          ></label>
           <ul className='menu p-4 w-80 min-h-full bg-white text-base-content overflow-y-auto'>
             {/* Sidebar content here */}
             <Sidebar endpoint={'parts'} />

@@ -55,12 +55,13 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <header className='sticky top-0 h-[80px] bg-gradient-to-r from-[#be47f1]  via-rose-500 to-[#9122c1]  shadow-lg z-20'>
+      <header className='sticky top-0 h-[60px] bg-gradient-to-r from-[#be47f1]  via-rose-500 to-[#9122c1]  shadow-lg z-20'>
         <nav className='max-w-[1290px] bg-transparent px-2 mx-auto h-full flex gap-4 items-center  justify-between relative z-10'>
           {/* menu icon */}
           <div
             className=' block  lg:hidden text-2xl'
-            onClick={() => setShowNav(!showNav)}>
+            onClick={() => setShowNav(!showNav)}
+          >
             <FaBars className='text-white' />
           </div>
 
@@ -77,16 +78,17 @@ const Navbar = () => {
           </div>
           {/* navigation item */}
           <div
-            className={`block text-md ms-auto lg:flex absolute top-[80px] lg:static py-2 gap-5  lg:py-0 px-1 lg:px-0 uppercase font-semibold bg-blue-600 lg:bg-transparent left-0 w-full lg:w-auto transition-all duration-500 ease-in-out  lg:z-0 text-gray-500 lg:text-gray-50  ${
+            className={`block text-xs ms-auto lg:flex absolute top-[80px] lg:static py-2 gap-5  lg:py-0 px-1 lg:px-0 uppercase font-semibold bg-blue-600 lg:bg-transparent left-0 w-full lg:w-auto transition-all duration-500 ease-in-out  lg:z-0 text-gray-500 lg:text-gray-50  ${
               showNav
                 ? ' translate-y-0 '
                 : ' -translate-y-[500px] lg:translate-y-0'
-            }`}>
+            }`}
+          >
             <Lists setShowNav={setShowNav} />
           </div>
           {/* account Page */}
           <Link to='/login'>
-            <button className='px-4  py-2 bg-gradient-to-r from-[#be47f172]  to-[#9122c186] text-md lg:text-lg font-semibold text-gray-200 shadow-xl rounded-sm focus:scale-95 transition-all duration-300 ease-in-out hover:bg-purple-500 capitalize flex justify-center items-center gap-3 '>
+            <button className='px-4  py-2 rounded-sm bg-gradient-to-r from-[#4c0f2f]  to-[#5a0632] text-md lg:text-lg font-semibold text-gray-200 shadow-xl focus:scale-95 transition-all duration-150 ease-in-out hover:bg-purple-800 capitalize flex justify-center items-center gap-3 '>
               <MdAccountCircle className=' hidden xl:block text-3xl' />
               <div className='bg-gray-200  hidden xl:block h-4 w-[2px]'></div>
               login / signup
